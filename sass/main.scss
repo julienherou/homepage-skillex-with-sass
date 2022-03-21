@@ -1,0 +1,50 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// 1. ABSTRACTS
+@import
+    "./1-abstracts/variables",
+    "./1-abstracts/colors",
+    "./1-abstracts/breakpoints",
+    "./1-abstracts/typography",
+    "./1-abstracts/functions",
+    "./1-abstracts/mixins";
+
+// 2. VENDORS
+// @import "./2-vendors/normalize";
+// @import "./2-vendors/gsap";
+
+// 3. BASE
+@import
+    "./3-base/reset",
+    "./3-base/base",
+    "./3-base/animations";
+
+// 4. LAYOUT
+@import
+    "./4-layout/container",
+    "./4-layout/header",
+    "./4-layout/navigation",
+    "./4-layout/sidebar",
+    "./4-layout/grid",
+    "./4-layout/forms",
+    "./4-layout/footer";
+
+
+// 5. COMPONENTS
+@import
+    "./5-components/buttons",
+    "./5-components/slider",
+    "./5-components/modal";
+
+// 6. PAGES
+@import
+    "./6-pages/homepage",
+    "./6-pages/contact";
+
+// 7. THEMES
+// @import
+//     "./7-themes/theme",
+//     "./7-themes/admin";
+
+
+
