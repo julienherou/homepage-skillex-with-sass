@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* FONT */
-/*
-font-family: 'Bebas Neue', cursive;
-font-family: 'Libre Baskerville', serif;
-font-family: 'Sarabun', sans-serif;
-*/
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
 /*─
@@ -111,112 +105,7 @@ iframe {
 }
 
 body {
-  margin: 0;
   font-size: 1.6rem;
-}
-
-.container {
-  margin: 6rem;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  border: 0.1rem solid #D6FFF5;
-}
-
-.header {
-  background: #a74472;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.header__logo {
-  font-size: 7rem;
-  color: #001534;
-  margin-left: 10rem;
-  text-shadow: 0.55rem 0.55rem #fff;
-}
-
-.nav {
-  padding-right: 6rem;
-  flex: 2 1 auto;
-  text-align: right;
-}
-.nav__link {
-  display: inline;
-  font-size: 3rem;
-  padding-left: 1.5rem;
-}
-.nav__link a {
-  text-decoration: none;
-  color: #D6FFF5;
-}
-.nav__link--active {
-  color: #001534;
-}
-.nav__link--active:hover {
-  cursor: default;
-  color: #001534;
-}
-.nav__link a:hover {
-  color: #fff;
-}
-
-.form {
-  width: 100%;
-  padding-bottom: 1.5rem;
-}
-.form__heading {
-  width: 100%;
-  color: #fff;
-  text-shadow: 0.55rem 0.55rem #833559;
-  background: #a74472;
-  line-height: 5rem;
-  padding: 1.5rem;
-}
-.form__field label {
-  color: #D6FFF5;
-  display: block;
-  font-size: 2rem;
-  line-height: 2rem;
-  padding-top: 1.5rem;
-}
-.form__field input {
-  width: 100%;
-  background: #001534;
-  border: 0.1rem solid #a74472;
-  padding: 1.5rem;
-  color: #D6FFF5;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 2.75rem;
-  border: 0.1rem solid #a74472;
-  background-color: #001534;
-  color: #a74472;
-}
-.form__field textarea {
-  width: 100%;
-  color: #a74472;
-  background: #001534;
-  border: 0.1rem solid #a74472;
-  outline: none;
-  padding: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.btn {
-  padding: 1.5rem;
-  border: 0.1rem solid #a74472;
-  color: #a74472;
-  background: #001534;
-  cursor: pointer;
-}
-.btn:hover {
-  background: #a74472;
-  color: #D6FFF5;
-}
-.btn--full-width {
-  width: 100%;
-  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
