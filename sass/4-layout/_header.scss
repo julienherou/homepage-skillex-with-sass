@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    .left{
+        display: flex;
+        align-items: center;
+        .logo{
+            margin-right: 10rem;
+            .dot{
+                color: $color-primary;
+                font-size: 4rem;
+                margin-left: .3rem;
+                line-height: 0;
+            }
+        }
+    }
+
+    .action{
+        .link{
+            margin-right: 4rem;
+        }
+    }
+}
+
+
+
+

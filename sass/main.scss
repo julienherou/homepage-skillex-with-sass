@@ -1,11 +1,12 @@
 // This is the single file output by sass. It is intended to ONLY @import other files.
 
+
+
 // 1. ABSTRACTS
 @import
     "./1-abstracts/variables",
     "./1-abstracts/colors",
     "./1-abstracts/breakpoints",
-    "./1-abstracts/typography",
     "./1-abstracts/functions",
     "./1-abstracts/mixins";
 
@@ -17,7 +18,9 @@
 @import
     "./3-base/reset",
     "./3-base/base",
+    "./3-base/typography",
     "./3-base/animations";
+
 
 // 4. LAYOUT
 @import

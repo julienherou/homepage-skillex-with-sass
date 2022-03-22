@@ -6,6 +6,7 @@
 /*─
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
 /*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
 *,
 *::after,
 *::before {
@@ -106,6 +107,74 @@ iframe {
 
 body {
   font-size: 1.6rem;
+  color: #1E1E2F;
+}
+
+@font-face {
+  font-family: "Archia Regular";
+  src: url("../fonts/archia-regular-webfont.woff2") format("woff2"), url("../fonts/archia-regular-webfont.woff") format("woff"), url("../fonts/archia-regular-webfont.ttf") format("truetype");
+}
+body {
+  font-family: "Archia Regular";
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 7.6rem;
+  line-height: 1;
+}
+
+.dot {
+  font-family: "Varela", sans-serif;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 4rem 8rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+header .left {
+  display: flex;
+  align-items: center;
+}
+header .left .logo {
+  margin-right: 10rem;
+}
+header .left .logo .dot {
+  color: #97c680;
+  font-size: 4rem;
+  margin-left: 0.3rem;
+  line-height: 0;
+}
+header .action .link {
+  margin-right: 4rem;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul > li {
+  margin-right: 4rem;
+}
+
+.btn {
+  background: #1E1E2F;
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
