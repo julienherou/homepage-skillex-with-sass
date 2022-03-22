@@ -1,7 +1,7 @@
 nav{
-    ul{
+    .menu{
         display: flex;
-        > li{
+        &__nav{
             margin-right: 4rem;
         }
     }
