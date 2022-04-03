@@ -1,9 +1,40 @@
 // BUTTONS
 .btn{
+    position: relative;
     background: $color-black;
     color: $color-white;
     padding: 1.1rem 4rem;
     border-radius: 4rem;
     cursor: pointer;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    a{
+        z-index: 1;
+        font-weight: 900;
+        transition: all 0.2s ease-in-out;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-primary;
+        border-radius: 4rem;
+        transform: scale3d(1, 0, 1);
+        transform-origin: bottom;
+        transition: all 0.2s ease-in-out;
+    }
+    &:hover{
+        &::after{
+            transform: scale3d(1, 1, 1);
+        }
+        a{
+            color: $color-black;
+        }
+    }
 }

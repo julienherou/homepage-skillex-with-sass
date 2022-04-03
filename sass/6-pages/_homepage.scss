@@ -1,6 +1,7 @@
 .homepage{
     &__hero{
         display: flex;
+        padding-bottom: 6rem;
         .left{
             position: relative;
             flex: 0.8;
@@ -22,9 +23,14 @@
             justify-content: space-between;
             width: 45rem;
             height: 12rem;
-            z-index: 1;
+            z-index: 3;
             background: $color-white;
             box-shadow: -4px 10px 20px 0px rgb(0 0 0 / 11%);
+            overflow: hidden;
+            transition: all ease-in-out 0.2s;
+            &:hover{
+                box-shadow: -4px 10px 20px 11px rgb(0 0 0 / 11%);
+            }
             .passion{
                 width: 100%;
                 border: 0.1rem solid rgba(151, 198, 128, 0);
@@ -32,33 +38,47 @@
                     padding-left: 5rem;
                     font-size: 2rem;
                     color: $color-black;
-                    transition: all ease-in-out 0.2s;
-                }
-                // &::placeholder{
-                //     font-size: 2rem;
-                //     color: $color-black;
-                // }
-                &:hover{
-                    box-shadow: 0px 2px 50px 0 rgb(0 0 0 / 10%);
                 }
                 &:focus{
                     color: rgba(30, 30, 47, 0.5);
                     border-color: $color-primary;
                 }
             }
-            .go{
+
+            .bloc-go{
+                position: relative;
                 background: $color-primary;
                 aspect-ratio: 1;
                 font-size: 3.5rem;
                 font-weight: 900;
                 cursor: pointer;
+                display: flex;
+                justify-content: center;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: $color-secondary;
+                    transform: translate3d( 0, 100%, 0);
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover::after{
+                    transform: translate3d( 0, 0, 0);
+                }
+                .go{
+                    z-index: 2;
+                    // pointer-events: none;
+                }
             }
+
         }
         .right{
             flex: 2.2;
             // background: green;
         }
-        .person{
+        // CARD ZONE
+        .person {
             display: flex;
             // justify-content: flex-end;
             justify-content: flex-start;
@@ -66,7 +86,7 @@
                 padding: 0 2rem;
                 width: 21%;
                 cursor: pointer;
-                transition: all ease-out .4s;
+                transition: width .4s;
                 .image{
                     position: relative;
                     border-radius: 2rem;
@@ -134,7 +154,7 @@
                     img{
                         height: 60rem;
                         object-fit: cover;
-                        transition: all ease-out .4s;
+                        transition: all ease-in-out .5s;
                     }
                 }
                 &.main-img{
@@ -172,8 +192,29 @@
 
             }
 
+        }
 
 
+    } // End of Hero
+    .gallery{
+        padding: 6rem 0;
+        &__heading{
+            text-align: center;
+            margin-bottom: 5rem;
+            .dot{
+                color: $color-primary;
+            }
+        }
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        &__nav{
+            display: flex;
+        }
+        &__nav-item{
+            margin: 0 2rem;
         }
 
 
@@ -181,11 +222,8 @@
 
 
 
+    } // End og gallery
 
 
-
-
-
-    } // End of Hero
 
 } // End of Homepage

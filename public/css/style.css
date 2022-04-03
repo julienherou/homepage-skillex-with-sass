@@ -134,6 +134,12 @@ h1 {
   font-family: "Varela", sans-serif;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+}
+
 .container {
   max-width: 154rem;
   margin: 0 auto;
@@ -159,28 +165,82 @@ header .left .logo .dot {
   margin-left: 0.3rem;
   line-height: 0;
 }
+header .left nav .menu {
+  display: flex;
+}
+header .left nav .menu__nav {
+  margin-right: 4rem;
+}
+header .action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header .action .link {
   margin-right: 4rem;
 }
 
-nav .menu {
-  display: flex;
-}
-nav .menu__nav {
-  margin-right: 4rem;
-}
-
 .btn {
+  position: relative;
   background: #1E1E2F;
   color: #fff;
   padding: 1.1rem 4rem;
   border-radius: 4rem;
   cursor: pointer;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.btn a {
+  z-index: 1;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #97c680;
+  border-radius: 4rem;
+  transform: scale3d(1, 0, 1);
+  transform-origin: bottom;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover::after {
+  transform: scale3d(1, 1, 1);
+}
+.btn:hover a {
+  color: #1E1E2F;
+}
+
+.link {
+  position: relative;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #97c680;
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+  transform: scale3d(1, 0, 1);
+  transform-origin: bottom;
+  transition: all 0.3s ease-in-out;
+}
+.link:hover::after {
+  transform: scale3d(1, 1, 1);
 }
 
 .homepage__hero {
   display: flex;
+  padding-bottom: 6rem;
 }
 .homepage__hero .left {
   position: relative;
@@ -201,9 +261,14 @@ nav .menu__nav {
   justify-content: space-between;
   width: 45rem;
   height: 12rem;
-  z-index: 1;
+  z-index: 3;
   background: #fff;
   box-shadow: -4px 10px 20px 0px rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+  transition: all ease-in-out 0.2s;
+}
+.homepage__hero form:hover {
+  box-shadow: -4px 10px 20px 11px rgba(0, 0, 0, 0.11);
 }
 .homepage__hero form .passion {
   width: 100%;
@@ -213,21 +278,35 @@ nav .menu__nav {
   padding-left: 5rem;
   font-size: 2rem;
   color: #1E1E2F;
-  transition: all ease-in-out 0.2s;
-}
-.homepage__hero form .passion:hover {
-  box-shadow: 0px 2px 50px 0 rgba(0, 0, 0, 0.1);
 }
 .homepage__hero form .passion:focus {
   color: rgba(30, 30, 47, 0.5);
   border-color: #97c680;
 }
-.homepage__hero form .go {
+.homepage__hero form .bloc-go {
+  position: relative;
   background: #97c680;
   aspect-ratio: 1;
   font-size: 3.5rem;
   font-weight: 900;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.homepage__hero form .bloc-go::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #feba88;
+  transform: translate3d(0, 100%, 0);
+  transition: all 0.3s ease-in-out;
+}
+.homepage__hero form .bloc-go:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+.homepage__hero form .bloc-go .go {
+  z-index: 2;
 }
 .homepage__hero .right {
   flex: 2.2;
@@ -240,7 +319,7 @@ nav .menu__nav {
   padding: 0 2rem;
   width: 21%;
   cursor: pointer;
-  transition: all ease-out 0.4s;
+  transition: width 0.4s;
 }
 .homepage__hero .person__image .image {
   position: relative;
@@ -306,7 +385,7 @@ nav .menu__nav {
 .homepage__hero .person__image .image img {
   height: 60rem;
   object-fit: cover;
-  transition: all ease-out 0.4s;
+  transition: all ease-in-out 0.5s;
 }
 .homepage__hero .person__image.main-img {
   width: 58%;
@@ -329,6 +408,27 @@ nav .menu__nav {
 }
 .homepage__hero .person__image:hover .text-person {
   opacity: 1;
+}
+.homepage .gallery {
+  padding: 6rem 0;
+}
+.homepage .gallery__heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.homepage .gallery__heading .dot {
+  color: #97c680;
+}
+.homepage .gallery nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.homepage .gallery__nav {
+  display: flex;
+}
+.homepage .gallery__nav-item {
+  margin: 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

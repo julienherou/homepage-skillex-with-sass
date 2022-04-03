@@ -1,9 +1,10 @@
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
-    .left{
+    // Left side
+    .left {
         display: flex;
         align-items: center;
         .logo{
@@ -15,9 +16,20 @@ header{
                 line-height: 0;
             }
         }
+        nav {
+            .menu {
+                display: flex;
+                &__nav{
+                    margin-right: 4rem;
+                }
+            }
+        }
     }
-
+    // Right side
     .action{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .link{
             margin-right: 4rem;
         }

@@ -1,0 +1,21 @@
+.link {
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: $color-primary ;
+        width: 100%;
+        height: 40%;
+        z-index: -1;
+        transform: scale3d(1, 0, 1);
+        transform-origin: bottom;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover{
+        &::after{
+            transform: scale3d(1, 1, 1);
+        }
+    }
+}
