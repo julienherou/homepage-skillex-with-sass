@@ -2,10 +2,10 @@
     &__hero{
         display: flex;
         padding-bottom: 6rem;
+        padding-left: 2rem;
         .left{
             position: relative;
             flex: 0.8;
-            // background: red;
             display: flex;
             flex-direction: column;
             h1{
@@ -69,12 +69,13 @@
                 .go{
                     z-index: 2;
                     // pointer-events: none;
+                    cursor: inherit;
                 }
             }
 
         }
         .right{
-            flex: 2.2;
+            flex: 2.15;
             // background: green;
         }
         // CARD ZONE
@@ -149,8 +150,6 @@
                             transform: rotate(-90deg) translate(3rem, 0);
                         }
                     }
-
-
                     img{
                         height: 60rem;
                         object-fit: cover;
@@ -209,6 +208,7 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            margin-bottom: 6rem;
         }
         &__nav{
             display: flex;
@@ -217,12 +217,162 @@
             margin: 0 2rem;
         }
 
+        .category{
+            display: flex;
+            justify-content: space-between;
+            &__card {
+                width: 25%;
+                padding: 0 1.6rem;
+                cursor: pointer;
+                &:hover {
+                    .category__title{
+                        color: $color-primary;
+                    }
+                    .bloc-arrow{
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+            &__img{
+                position: relative;
+                overflow: hidden;
+                .bloc-arrow{
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    width: 4rem;
+                    background-color: $color-white;
+                    border-radius: 50%;
+                    padding: 1.2rem;
+                    transform: translate3d(0, -6rem, 0);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .image{
+                    width: 100%;
+                    border-radius: 2rem;
+                    margin-bottom: 2.5rem;
+                }
+            }
+            &__title{
+                font-size: 2.4rem;
+                font-weight: 900;
+                margin-bottom: 1rem;
+                transition: color 0.2s ease-in-out;
+            }
 
-
-
-
+        }
 
     } // End og gallery
+
+    .skills {
+        padding: 5rem 2rem;
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5rem;
+        }
+        &__text {
+            position: relative;
+            width: 50%;
+            .text{
+                width: 56rem;
+                font-size: 2rem;
+                line-height: 1.4;
+            }
+        }
+        &__achieve{
+            position: absolute;
+            bottom: -11rem;
+            width: 56rem;
+            background: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .left, .right {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .big-number {
+                font-size: 5rem;
+                font-weight: 900;
+                margin-right: 1.5rem;
+                padding: 3rem 0 3rem 0;
+            }
+            .little-text{
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            .vertical-line {
+                width: 0.1rem;
+                height: 4rem;        
+                background: $color-black;
+                margin: 0 5rem 0 5rem;
+            }
+
+
+        }
+        &__columns{
+            display: flex;
+            height: 50rem;
+            .left{
+                // background: red;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .item{
+                    display: flex;
+                    padding: 3rem 0;
+                    .item-title{
+                        font-size: 2rem;
+                        font-weight: 900;
+                        margin-bottom: 1.5rem;
+                    }
+                    .icon {
+                        background: $color-white;
+                        // padding: 2rem;
+                        border-radius: 50%;
+                        width: 6rem;
+                        height: 6rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 2.5rem;
+                        img {
+                            width: 2.5rem;
+                        }
+                    }
+
+
+                }
+
+
+
+
+
+
+            }
+            .right{
+                // background: green;
+                flex: 3;
+                .contain-vid{
+                    border-radius: 3rem;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    video{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+
+        }
+    }
 
 
 
